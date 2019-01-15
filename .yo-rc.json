@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "automationweb",
+    "packageName": "com.accenture.automation.web",
+    "packageFolder": "com/accenture/automation/web",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.7.2",
+    "jwtSecretKey": "MzQ0MWQzYjM3YzFhNDdiZmUzNzQzMGI1YTJjOTFkNGIzNjBjNGU4MDgwNzU1OGUwNTE5YTBmNmYzZDkzNGM4OWFiZjQxODg3MzViNTNkMTJiYmQwMTM2NTM0YzQxZTc5MDQ1MDQ5MjdkNzVkMGI5YTllZDU4ZmEyOWE1ODVhYWU=",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "Zomahd",
+  "repository-name": "automationweb"
+}
