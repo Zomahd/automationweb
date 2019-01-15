@@ -1,0 +1,58 @@
+/**
+ * The Account entity.
+ */
+entity Account {
+	name String required,
+	manager String required,
+	managerEmail String required,
+    status Status required
+}
+
+/**
+ * The Status Enum.
+ */
+enum Status {
+	OPEN, CLOSED
+}
+
+/**
+ * The Suite entity.
+ */
+entity Suite {
+	name String required
+}
+
+/**
+ * The Test entity.
+ */
+entity Test {
+	name String required,
+    browser Browser required,
+    sourceType SourceType required
+}
+
+/**
+ * The SourceType Enum.
+ */
+enum SourceType {
+	CORE, SAUCELABS
+}
+
+/**
+ * The Browser Enum.
+ */
+enum Browser {
+	CHROME, FIREFOX, IE, EDGE, SAFARI, OPERA, MULTIPLE
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Account{suite} to Suite,
+    Suite{test} to Test
+}
+
+// Set pagination options
+paginate Account, Suite, Test with pager
+
+// Set Service Implement Classes
+service * with serviceImpl
