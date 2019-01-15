@@ -38,6 +38,11 @@ public class CacheConfiguration {
             cm.createCache(com.accenture.automation.web.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.accenture.automation.web.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.accenture.automation.web.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.accenture.automation.web.domain.Client.class.getName(), jcacheConfiguration);
+            cm.createCache(com.accenture.automation.web.domain.Client.class.getName() + ".suites", jcacheConfiguration);
+            cm.createCache(com.accenture.automation.web.domain.Suite.class.getName(), jcacheConfiguration);
+            cm.createCache(com.accenture.automation.web.domain.Suite.class.getName() + ".tests", jcacheConfiguration);
+            cm.createCache(com.accenture.automation.web.domain.SuiteTest.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

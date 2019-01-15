@@ -1,7 +1,7 @@
 /**
  * The Account entity.
  */
-entity Account {
+entity Client {
 	name String required,
 	manager String required,
 	managerEmail String required,
@@ -25,7 +25,7 @@ entity Suite {
 /**
  * The Test entity.
  */
-entity Test {
+entity SuiteTest {
 	name String required,
     browser Browser required,
     sourceType SourceType required
@@ -47,12 +47,12 @@ enum Browser {
 
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
-	Account{suite} to Suite,
-    Suite{test} to Test
+	Client{suite} to Suite,
+    Suite{test} to SuiteTest
 }
 
 // Set pagination options
-paginate Account, Suite, Test with pager
+paginate Client, Suite, SuiteTest with pager
 
 // Set Service Implement Classes
 service * with serviceImpl
